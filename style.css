@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+    --bold-color: white;
+    --base-color: #C4C4CC;
+    --btn-color-hover: #02799D;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.bcImage{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 4rem 7.2rem;
+}
+
+nav img {
+    margin-right: 3.2rem;
+}
+
+nav a:not(:first-child) {
+    margin-right: 5.2rem;    
+}
+
+nav a {
+    color: var(--base-color);
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.2rem;
+}
+
+a:hover {
+    color: var(--bold-color);
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: -12.2rem;
+    gap: 2.4rem;
+}
+
+h1 {
+    color: var(--base-color);
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 125%;
+}
+
+
+
+p {
+    color: var(--base-color);
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.universe,
+.exploration {
+    display: grid;
+    place-content: center;
+    gap: 1.6rem;
+    
+    width: 65rem;
+    height: 100vh;
+    margin-top: -18.5rem;
+    margin-inline-start: 10.6rem;
+
+    animation: pageTransition 1s backwards;
+}
+
+.home h1 {
+    animation: topTodown 1s backwards;
+}
+
+.home a {
+    display: inline-block;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 1.2rem 3.2rem;
+  
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.71;
+    text-transform: uppercase;
+    color: #ffffff;
+  
+    animation: downTotop 1s backwards;
+  }
+
+.home a:hover {
+    color: var(--btn-color-hover);
+    background-color: var(--bold-color);
+    transform: scale(1.02);
+}
+
+/* animations */
+
+@keyframes downTotop {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes topTodown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+@keyframes pageTransition {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+}
+
+
